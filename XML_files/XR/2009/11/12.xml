@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="http://api.finance.xaviermedia.com/style/daily_rates.xsl" type="text/xsl"?>
+<xavierresponse responsecode="200">
+  <fx_date>2009-11-12</fx_date>
+  <title>Xavier Finance - Exchange rates for 2009-11-12</title>
+  <link>http://finance.xaviermedia.com/</link>
+  <exchange_rates>
+    <basecurrency>EUR</basecurrency>
+    <fx_date>2009-11-12</fx_date>
+    <fx basecurrency="EUR">
+	<currency_code>EUR</currency_code>
+	<rate>1.0</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>USD</currency_code>
+	<rate>1.492200</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>JPY</currency_code>
+	<rate>134.320007</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>GBP</currency_code>
+	<rate>0.902000</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>CYP</currency_code>
+	<rate>0.000000</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>CZK</currency_code>
+	<rate>25.504999</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>DKK</currency_code>
+	<rate>7.441200</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>EEK</currency_code>
+	<rate>15.646600</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>HUF</currency_code>
+	<rate>271.140015</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>LTL</currency_code>
+	<rate>3.452800</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>MTL</currency_code>
+	<rate>0.000000</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>PLN</currency_code>
+	<rate>4.141100</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>SEK</currency_code>
+	<rate>10.248000</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>SIT</currency_code>
+	<rate>0.000000</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>SKK</currency_code>
+	<rate>0.000000</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>CHF</currency_code>
+	<rate>1.510600</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>ISK</currency_code>
+	<rate>0.000000</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>NOK</currency_code>
+	<rate>8.391500</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>BGN</currency_code>
+	<rate>1.955800</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>HRK</currency_code>
+	<rate>7.295500</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>ROL</currency_code>
+	<rate>0.000000</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>RON</currency_code>
+	<rate>4.299500</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>RUB</currency_code>
+	<rate>43.007000</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>TRL</currency_code>
+	<rate>0.000000</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>AUD</currency_code>
+	<rate>1.606200</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>CAD</currency_code>
+	<rate>1.570200</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>CNY</currency_code>
+	<rate>10.186700</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>HKD</currency_code>
+	<rate>11.564600</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>IDR</currency_code>
+	<rate>14066.340</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>KRW</currency_code>
+	<rate>1727.109985</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>MYR</currency_code>
+	<rate>5.046600</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>NZD</currency_code>
+	<rate>2.028700</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>PHP</currency_code>
+	<rate>69.934998</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>SGD</currency_code>
+	<rate>2.071600</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>THB</currency_code>
+	<rate>49.713001</rate>
+    </fx>
+    <fx basecurrency="EUR">
+	<currency_code>ZAR</currency_code>
+	<rate>11.142000</rate>
+    </fx>
+  </exchange_rates>
+</xavierresponse>
