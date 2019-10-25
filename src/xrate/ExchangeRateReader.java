@@ -110,11 +110,13 @@ public class ExchangeRateReader {
      */
     public float getExchangeRate(String fromCurrency, String toCurrency,int year, int month, int day) throws IOException {
 
+        // Build URL from baseURL, the date info provided, and the access key
         URL url = new URL(baseURL + DateTimeFormatter.ISO_LOCAL_DATE.format(LocalDate.of(year, month, day)) + "?access_key=" + accessKey);
+
         BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
         JsonObject json = JsonParser.parseReader(reader).getAsJsonObject();
 
-        if(!json.get("success").getAsBoolean())
+        if(!json.get("success").getAsBoolean()) // Catch when success in the JSON response is false
             throw new IOException(json.getAsJsonObject("error").get("type").getAsString());
 
         float from = json.getAsJsonObject("rates").get(fromCurrency).getAsFloat();
