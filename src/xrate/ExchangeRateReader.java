@@ -1,8 +1,18 @@
 package xrate;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Properties;
+
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 
 /**
  * Provide access to basic currency exchange rate services.
@@ -10,6 +20,7 @@ import java.util.Properties;
 public class ExchangeRateReader {
 
     private String accessKey;
+    private String baseURL;
 
     /**
      * Construct an exchange rate reader using the given base URL. All requests
@@ -23,14 +34,8 @@ public class ExchangeRateReader {
      *            the base URL for requests
      */
     public ExchangeRateReader(String baseURL) throws IOException {
-        /*
-         * DON'T DO MUCH HERE!
-         * People often try to do a lot here, but the action is actually in
-         * the two methods below. All you need to do here is store the
-         * provided `baseURL` in a field so it will be accessible later.
-         */
 
-        // TODO Your code here
+        this.baseURL = baseURL;
 
         // Reads the access keys from `etc/access_keys.properties`
         readAccessKeys();
@@ -82,10 +87,8 @@ public class ExchangeRateReader {
      * @throws IOException if there are problems reading from the server
      */
     public float getExchangeRate(String currencyCode, int year, int month, int day) throws IOException {
-        // TODO Your code here
 
-        // Remove the next line when you've implemented this method.
-        throw new UnsupportedOperationException();
+        return getExchangeRate(currencyCode, "EUR", year, month, day);
     }
 
     /**
@@ -105,12 +108,18 @@ public class ExchangeRateReader {
      * @return the desired exchange rate
      * @throws IOException if there are problems reading from the server
      */
-    public float getExchangeRate(
-            String fromCurrency, String toCurrency,
-            int year, int month, int day) throws IOException {
-        // TODO Your code here
+    public float getExchangeRate(String fromCurrency, String toCurrency,int year, int month, int day) throws IOException {
 
-        // Remove the next line when you've implemented this method.
-        throw new UnsupportedOperationException();
+        URL url = new URL(baseURL + DateTimeFormatter.ISO_LOCAL_DATE.format(LocalDate.of(year, month, day)) + "?access_key=" + accessKey);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
+        JsonObject json = JsonParser.parseReader(reader).getAsJsonObject();
+
+        if(!json.get("success").getAsBoolean())
+            throw new IOException(json.getAsJsonObject("error").get("type").getAsString());
+
+        float from = json.getAsJsonObject("rates").get(fromCurrency).getAsFloat();
+        float to = json.getAsJsonObject("rates").get(toCurrency).getAsFloat();
+
+        return from / to;
     }
 }
